@@ -16,7 +16,13 @@ python arducopter-troubleshooter/scripts/parse_params.py sample-config.param
 python arducopter-troubleshooter/scripts/analyze_params.py parsed_params.json
 ```
 
-To use as an OpenCode skill, install it to `~/.config/opencode/skills/arducopter-troubleshooter/` — OpenCode auto-discovers skills on startup.
+To install as an OpenCode skill:
+
+```bash
+npx skills add Allentgt/arducopter-skill --skill arducopter-troubleshooter -a opencode -g -y
+```
+
+Or manually copy to `~/.config/opencode/skills/arducopter-troubleshooter/` — OpenCode auto-discovers skills on startup.
 
 ## Features
 
