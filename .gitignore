@@ -16,3 +16,8 @@ Thumbs.db
 
 # Generated
 *.log
+parsed_params.json
+skystarh7_*.json
+fix_*.py
+--stdout
+-o
