@@ -1,0 +1,82 @@
+[
+  {
+    "query": "my 5 inch quad is oscillating at hover, i just put new props on. running a skystar h7 with dshot600 on 6s",
+    "should_trigger": true
+  },
+  {
+    "query": "can you help me tune my pids? my 7 inch long range feels sluggish on roll and has a little wobble",
+    "should_trigger": true
+  },
+  {
+    "query": "my ekf keeps going yellow in the osd when i throttle up, compass offsets look high in the params",
+    "should_trigger": true
+  },
+  {
+    "query": "i had a failsafe trigger on my quad today, it did rtl but my battery was at 21.2v on 6s — should that have triggered?",
+    "should_trigger": true
+  },
+  {
+    "query": "my motors are getting really hot after i ran autotune, what params should i check first",
+    "should_trigger": true
+  },
+  {
+    "query": "quad wont arm, gcs says pre-arm: compass variance too high. i just moved my vtx antenna",
+    "should_trigger": true
+  },
+  {
+    "query": "im building a new 7 inch long range quad for the first time, any tips on frame/motor/prop combos and what to watch for?",
+    "should_trigger": true
+  },
+  {
+    "query": "my gps wont get a 3d fix, hdop shows 250 and only 6 sats. using a bn-880 on a 5 inch",
+    "should_trigger": true
+  },
+  {
+    "query": "whats the practical difference between loiter and poshold for aerial filming? which is more stable",
+    "should_trigger": true
+  },
+  {
+    "query": "here's my param file — can you scan it for anything risky before i maiden this build?",
+    "should_trigger": true
+  },
+  {
+    "query": "my betaflight quad has drift issues in angle mode and the accelerometer calibration doesnt seem to stick",
+    "should_trigger": false
+  },
+  {
+    "query": "how do i set up mission planner for my new pixhawk plane? its a skywalker 1900",
+    "should_trigger": false
+  },
+  {
+    "query": "i need to configure ardupilot rover compass calibration for my basher rock crawler",
+    "should_trigger": false
+  },
+  {
+    "query": "my quadcopter footage has jello effect, how do i fix it in davinci resolve?",
+    "should_trigger": false
+  },
+  {
+    "query": "what fpv goggles do you recommend for a beginner under $200?",
+    "should_trigger": false
+  },
+  {
+    "query": "i want to get my first drone, should i buy a dji mini or build a 5 inch for photography",
+    "should_trigger": false
+  },
+  {
+    "query": "can you write a python script that parses mavlink telemetry from a udp stream and logs it to csv",
+    "should_trigger": false
+  },
+  {
+    "query": "my inav quad keeps falling out of the sky on sharp turns, any ideas?",
+    "should_trigger": false
+  },
+  {
+    "query": "how do hydrodipping carbon fiber parts for a quad frame?",
+    "should_trigger": false
+  },
+  {
+    "query": "whats the best way to solder xt90 connectors without cold joints",
+    "should_trigger": false
+  }
+]
