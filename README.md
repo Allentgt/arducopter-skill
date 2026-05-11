@@ -12,7 +12,7 @@ git clone https://github.com/Allentgt/arducopter-skill.git
 cd arducopter-skill
 
 # Test the param analysis scripts against the included fixture
-python arducopter-troubleshooter/scripts/parse_params.py skystarh7.param
+python arducopter-troubleshooter/scripts/parse_params.py sample-config.param
 python arducopter-troubleshooter/scripts/analyze_params.py parsed_params.json
 ```
 
@@ -81,14 +81,7 @@ arducopter-troubleshooter/       # OpenCode skill (install to skills dir)
 ├── scripts/                     # Deterministic analysis tools
 │   ├── parse_params.py          # .param file → structured JSON by subsystem
 │   └── analyze_params.py        # Check parsed params against known-safe ranges
-docs/
-└── superpowers/
-    ├── specs/
-    │   ├── 2026-05-11-arducopter-troubleshooter-design.md   # Design specification
-    │   └── trigger-eval-set.json                             # 20 trigger eval queries
-    └── plans/
-        └── 2026-05-11-arducopter-troubleshooter.md           # Implementation plan
-skystarh7.param                  # Real test fixture (SkyStar H7, 6S, X-frame)
+sample-config.param                  # Sample param config for testing scripts
 ```
 
 ## Scripts Reference
@@ -123,10 +116,10 @@ python arducopter-troubleshooter/scripts/analyze_params.py parsed_params.json
 
 ## Test Fixture
 
-The included `skystarh7.param` is a real-world param export from a SkyStar H7 flight controller on a 6S X-frame quad running DShot600 at 400Hz loop rate with harmonic notch enabled at 80Hz. Use it to verify scripts are working:
+The included `sample-config.param` is a real-world param export from a SkyStar H7 flight controller on a 6S X-frame quad running DShot600 at 400Hz loop rate with harmonic notch enabled at 80Hz. Use it to verify scripts are working:
 
 ```bash
-python arducopter-troubleshooter/scripts/parse_params.py skystarh7.param
+python arducopter-troubleshooter/scripts/parse_params.py sample-config.param
 python arducopter-troubleshooter/scripts/analyze_params.py parsed_params.json
 ```
 

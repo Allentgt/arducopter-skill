@@ -187,7 +187,7 @@ version is bleeding-edge:
 - **Hardware first, software second.** Check physical issues (props,
   frame, wiring) before suggesting parameter changes.
 - **Reference docs are guides, not gospel.** Every build is different.
-- **Use the param file as a test fixture.** The provided `skystarh7.param`
+- **Use the param file as a test fixture.** The provided `sample-config.param`
   can be used to verify the parsing scripts work correctly.
 
 ---
