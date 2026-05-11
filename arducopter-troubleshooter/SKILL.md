@@ -126,19 +126,45 @@ Check param context:
 
 ### Phase 4: Recommendation
 
-After matching the symptom, provide:
+After matching the symptom, present recommendations as a **Param Change Log**
+— a table grouped by subsystem with old/new values and one-liner explanations.
+Always pair param changes with hardware checks and re-test steps.
 
-1. **Specific param changes** — exact parameter name and new value:
-   ```
-   ATC_RAT_RLL_P from 0.135 → 0.110 (reduce by 20%)
-   ```
-2. **Hardware checks** — what to inspect and how:
+Use this format for all parameter changes:
+
+```markdown
+#### \<subsystem (e.g. Filters, Battery, PID Roll)\>
+| Param | Current → New | Why |
+|-------|---------------|-----|
+| INS_GYRO_FILTER | 80 → 40 | Gyro filter was letting through motor noise on a 5" |
+| INS_HNTCH_FREQ | 100 → 80 | Notch was above the resonant peak — lowering to match |
+```
+
+**Subsystem grouping** — use these names consistently:
+
+| Subsystem | Example params |
+|-----------|---------------|
+| Filters | INS_GYRO_FILTER, INS_HNTCH_ENABLE, INS_HNTCH_FREQ |
+| PID Roll | ATC_RAT_RLL_P, ATC_RAT_RLL_D, ATC_RAT_RLL_FLTD |
+| PID Pitch | ATC_RAT_PIT_P, ATC_RAT_PIT_D, ATC_RAT_PIT_FLTD |
+| PID Yaw | ATC_RAT_YAW_P, ATC_RAT_YAW_D, ATC_RAT_YAW_FLTD |
+| Throttle | MOT_THST_HOVER, MOT_SPIN_MIN, THR_DZ |
+| Battery | BATT_CRT_VOLT, BATT_LOW_VOLT, BATT_ARM_VOLT, BATT_FS_CRT_ACT |
+| Motor / ESC | MOT_PWM_TYPE, MOT_BOOST_SCALE, SERVO_BLH_MASK |
+| EKF / Compass | EK3_MAG_CAL, COMPASS_OFS_X, EK3_SRC1_YAW |
+| GPS | GPS_HDOP_GOOD, GPS_TYPE, GPS_AUTO_CONFIG |
+| Failsafe | FS_EKF_ACTION, FS_THR_VALUE, BATT_FS_LOW_ACT |
+| Arming | ARMING_CHECK, ARMING_MAGTHRESH |
+
+Follow the Param Change Log with:
+
+1. **Hardware checks** — what to inspect and how:
    "Balance props using a prop balancer. Check that frame bolts are tight.
    Ensure FC is on vibration-dampening mount."
-3. **Re-test instructions** — how to verify:
+2. **Re-test instructions** — how to verify:
    "Arm and hover at 2m altitude. Listen for oscillations. If smooth,
    try a slow forward flight pass. Report back."
-4. **Confirmation** — ask if the fix helped before escalating
+3. **Confirmation** — ask if the fix helped before escalating
 
 ### Phase 5: Web Fallback
 
